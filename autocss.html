@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head id="head">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="outerDiv">
+      <h1>Welcome Message</h1>
+      <button onclick="toggleCSS();" id="btn1">Toggle CSS</button>
+    </div>
+  </body>
+  <script>
+    var i = 0;
+    function toggleCSS() {
+      i++;
+      if (i % 2 !== 0) {
+        document.getElementById("head").innerHTML =
+          '<title> This is toggle css page with CSS</title>\n<link rel="stylesheet" href="style.css" />';
+      } else {
+        document.getElementById("head").innerHTML =
+          "<title> This is toggle css page without CSS</title>";
+      }
+    }
+  </script>
+</html>
